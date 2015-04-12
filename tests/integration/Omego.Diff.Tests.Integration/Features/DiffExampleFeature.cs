@@ -1,4 +1,8 @@
-﻿using Xbehave;
+﻿using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using Xbehave;
 
 namespace Omego.Diff.Tests.Integration.Features
 {
@@ -7,8 +11,10 @@ namespace Omego.Diff.Tests.Integration.Features
         [Scenario()]
         public void GenerateDiffStats()
         {
-            "Given I have git diff file".f(() => { }).Skip("Step to be implemented");
-            "When I run Omego.Diff".f(() => { }).Skip("Step to be implemented");
+            var gitDiff = default(string);
+
+            "Given I have git diff file".f(() => gitDiff = Path.GetFullPath(@"Resources\Test.diff"));
+            "When I run Omego.Diff".f(() => Process.Start("Omego.Diff.Stats.exe", gitDiff));
             "Then I should se the git diff stats".f(() => { }).Skip("Step to be implemented");
         }
     }

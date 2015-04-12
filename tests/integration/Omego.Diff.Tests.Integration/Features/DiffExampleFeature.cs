@@ -27,15 +27,14 @@ namespace Omego.Diff.Tests.Integration.Features
             };
 
             "When I run Omego.Diff".f(() => process.Start());
-            "Then I should se the git diff stats".f(() =>
+
+            var lines = new List<string>();
+            while (!process.StandardOutput.EndOfStream)
             {
-                var lines = new List<string>();
-                while (!process.StandardOutput.EndOfStream)
-                {
-                    lines.Add(process.StandardOutput.ReadLine());
-                }
-                lines.Should().HaveCount(3);
-            });
+                lines.Add(process.StandardOutput.ReadLine());
+            }
+
+            "Then I should se the git diff stats".f(() => lines.Should().HaveCount(3));
         }
     }
 }

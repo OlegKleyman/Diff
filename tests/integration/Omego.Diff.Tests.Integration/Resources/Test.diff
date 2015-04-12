@@ -1,0 +1,50 @@
+﻿diff --git a/README.md b/README.md
+index f479026..d0a0805 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,5 @@
+ ### Well hello there!
++THIS IS YB's 1ST CHANGE
+ 
+ This repository is meant to provide an example for *forking* a repository on GitHub.
+ 
+@@ -7,3 +8,5 @@ Creating a *fork* is producing a personal copy of someone else's project. Forks
+ After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
+ 
+ For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
++
++2ND CHANGE IS HERE...
+diff --git a/index.html b/index.html
+index a83618b..e16a77e 100644
+--- a/index.html
++++ b/index.html
+@@ -3,7 +3,7 @@
+ <html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+-  <title>Spoon-Knife</title>
++  <title>Spoon-Knife(YB here)</title>
+   <LINK href="styles.css" rel="stylesheet" type="text/css">
+ </head>
+ 
+@@ -11,7 +11,8 @@
+ 
+ <img src="forkit.gif" id="octocat" alt="" />
+ 
+-<!-- Feel free to change this text here -->
++<!-- Feel free to change this text here
++3RD CHANGE APPEARS -->
+ <p>
+   Fork me? Fork you, @octocat!
+ </p>
+diff --git a/styles.css b/styles.css
+index 9b85284..7be926d 100644
+--- a/styles.css
++++ b/styles.css
+@@ -13,5 +13,5 @@ p {
+   display: block;
+   width: 400px;
+   margin: 50px auto;
+-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
++  font: 32px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+ }

@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{2A12
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Stats", "Example\Omego.Diff.Stats\Omego.Diff.Stats.csproj", "{7BDCEFE2-E12D-4033-959C-291139E0F2B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Tests.Integration", "Tests\Integration\Omego.Diff.Tests.Integration\Omego.Diff.Tests.Integration.csproj", "{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,5 +53,6 @@ Global
 		{A60422DC-B565-46ED-9669-AE2878BF004D} = {B6A3E6BD-0E7F-4B88-8116-5B4D4F465507}
 		{B061017A-D165-48BC-B378-A8568A4CAF4C} = {C6A72119-A2CC-4768-8FAA-80C78A03D75C}
 		{7BDCEFE2-E12D-4033-959C-291139E0F2B7} = {2A1250C2-45DB-45DB-990A-B2C2105EE9B4}
+		{D9542D69-1E12-4F2E-A0E5-0E31C7F5C62B} = {EF0280A0-92A4-4513-811D-800FCE85FE34}
 	EndGlobalSection
 EndGlobal

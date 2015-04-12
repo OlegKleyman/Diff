@@ -51,7 +51,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Example\Omego.Diff.Stats\Omego.Diff.Stats.csproj">
+      <Project>{7bdcefe2-e12d-4033-959c-291139e0f2b7}</Project>
+      <Name>Omego.Diff.Stats</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

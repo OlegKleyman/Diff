@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff", "src\Omego.Diff\Omego.Diff.csproj", "{A60422DC-B565-46ED-9669-AE2878BF004D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Tests.Unit", "Tests\Omego.Diff.Tests.Unit\Omego.Diff.Tests.Unit.csproj", "{B061017A-D165-48BC-B378-A8568A4CAF4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Tests.Unit", "tests\unit\Omego.Diff.Tests.Unit\Omego.Diff.Tests.Unit.csproj", "{B061017A-D165-48BC-B378-A8568A4CAF4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{2A1250C2-45DB-45DB-990A-B2C2105EE9B4}"
 EndProject

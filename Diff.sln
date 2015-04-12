@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff", "src\Omego.Dif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Tests.Unit", "Tests\Omego.Diff.Tests.Unit\Omego.Diff.Tests.Unit.csproj", "{B061017A-D165-48BC-B378-A8568A4CAF4C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{2A1250C2-45DB-45DB-990A-B2C2105EE9B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omego.Diff.Stats", "Example\Omego.Diff.Stats\Omego.Diff.Stats.csproj", "{7BDCEFE2-E12D-4033-959C-291139E0F2B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{B061017A-D165-48BC-B378-A8568A4CAF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B061017A-D165-48BC-B378-A8568A4CAF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B061017A-D165-48BC-B378-A8568A4CAF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDCEFE2-E12D-4033-959C-291139E0F2B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +46,6 @@ Global
 		{EF0280A0-92A4-4513-811D-800FCE85FE34} = {6CA252A9-0FBA-4984-A294-09CBB6E38963}
 		{A60422DC-B565-46ED-9669-AE2878BF004D} = {B6A3E6BD-0E7F-4B88-8116-5B4D4F465507}
 		{B061017A-D165-48BC-B378-A8568A4CAF4C} = {C6A72119-A2CC-4768-8FAA-80C78A03D75C}
+		{7BDCEFE2-E12D-4033-959C-291139E0F2B7} = {2A1250C2-45DB-45DB-990A-B2C2105EE9B4}
 	EndGlobalSection
 EndGlobal

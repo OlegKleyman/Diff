@@ -1,8 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using Xbehave;
+using FluentAssertions;
 
 namespace Omego.Diff.Tests.Integration.Features
 {
@@ -14,8 +14,28 @@ namespace Omego.Diff.Tests.Integration.Features
             var gitDiff = default(string);
 
             "Given I have git diff file".f(() => gitDiff = Path.GetFullPath(@"Resources\Test.diff"));
-            "When I run Omego.Diff".f(() => Process.Start("Omego.Diff.Stats.exe", gitDiff));
-            "Then I should se the git diff stats".f(() => { }).Skip("Step to be implemented");
+
+            var startInfo = new ProcessStartInfo("Omego.Diff.Stats.exe", gitDiff)
+            {
+                RedirectStandardOutput = true,
+                UseShellExecute = false
+            };
+
+            var process = new Process()
+            {
+                StartInfo = startInfo
+            };
+
+            "When I run Omego.Diff".f(() => process.Start());
+            "Then I should se the git diff stats".f(() =>
+            {
+                var lines = new List<string>();
+                while (!process.StandardOutput.EndOfStream)
+                {
+                    lines.Add(process.StandardOutput.ReadLine());
+                }
+                lines.Should().HaveCount(3);
+            });
         }
     }
 }

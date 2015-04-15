@@ -3,7 +3,7 @@
     /// <summary>
     /// Entry class for application
     /// </summary>
-    public class Program
+    public static class Program
     {
         static void Main()
         {

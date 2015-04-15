@@ -26,7 +26,7 @@ namespace Omego.Diff.Tests.Integration.Features
 
                 process = Process.Start(startInfo);
             });
-            
+
             "Then I should se the git diff stats".f(() =>
             {
                 var lines = new List<string>();

@@ -1,11 +1,14 @@
 ﻿namespace Omego.Diff.Stats
 {
     /// <summary>
-    /// Entry class for application
+    /// Entry class for application.
     /// </summary>
     public static class Program
     {
-        static void Main()
+        /// <summary>
+        /// Driver method for the application.
+        /// </summary>
+        public static void Main()
         {
         }
     }

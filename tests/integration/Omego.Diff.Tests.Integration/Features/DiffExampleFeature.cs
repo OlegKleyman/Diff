@@ -6,10 +6,10 @@ using FluentAssertions;
 
 namespace Omego.Diff.Tests.Integration.Features
 {
-    public class DiffExampleFeature
+    public static class DiffExampleFeature
     {
         [Scenario()]
-        public void GenerateDiffStats()
+        public static void GenerateDiffStats()
         {
             var gitDiff = default(string);
             var process = default(Process);

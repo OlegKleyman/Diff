@@ -1,6 +1,9 @@
 ﻿namespace Omego.Diff.Stats
 {
-    class Program
+    /// <summary>
+    /// Entry class for application
+    /// </summary>
+    public class Program
     {
         static void Main()
         {

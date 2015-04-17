@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using Xbehave;
-using FluentAssertions;
-
-namespace Omego.Diff.Tests.Integration.Features
+﻿namespace Omego.Diff.Tests.Integration.Features
 {
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.IO;
+    using FluentAssertions;
+    using Xbehave;
+
     public static class DiffExampleFeature
     {
-        [Scenario()]
+        [Scenario]
         public static void GenerateDiffStats()
         {
             var gitDiff = default(string);
@@ -34,6 +34,7 @@ namespace Omego.Diff.Tests.Integration.Features
                 {
                     lines.Add(process.StandardOutput.ReadLine());
                 }
+
                 lines.Should().HaveCount(3);
             }).Skip("Production code not yet implemented");
         }

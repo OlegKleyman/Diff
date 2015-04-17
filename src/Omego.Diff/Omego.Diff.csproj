@@ -35,6 +35,9 @@
     <Compile Include="..\..\GlobalSuppressions.cs">
       <Link>GlobalSuppressions.cs</Link>
     </Compile>
+    <Compile Include="DiffReader.cs" />
+    <Compile Include="DiffResult.cs" />
+    <Compile Include="GitDiffReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

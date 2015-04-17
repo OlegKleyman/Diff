@@ -48,6 +48,12 @@
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Omego.Diff\Omego.Diff.csproj">
+      <Project>{A60422DC-B565-46ED-9669-AE2878BF004D}</Project>
+      <Name>Omego.Diff</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

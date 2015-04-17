@@ -1,4 +1,6 @@
-﻿namespace Omego.Diff.Stats
+﻿using System.IO;
+
+namespace Omego.Diff.Stats
 {
     /// <summary>
     /// Entry class for application.
@@ -8,8 +10,10 @@
         /// <summary>
         /// Driver method for the application.
         /// </summary>
-        public static void Main()
+        /// <param name="args">Console arguments.</param>
+        public static void Main(string[] args)
         {
+            var diff = DiffResult.FromReader(new GitDiffReader(new StreamReader(args[0]).ReadToEnd()));
         }
     }
 }

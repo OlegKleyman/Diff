@@ -6,9 +6,9 @@ namespace Omego.Diff
 {
     public class DiffRecord
     {
-        private readonly Dictionary<DiffProperties, object> properties;
+        private readonly Dictionary<DiffProperty, object> properties;
 
-        public DiffRecord(int id, Dictionary<DiffProperties, object> properties)
+        public DiffRecord(int id, Dictionary<DiffProperty, object> properties)
         {
             if (properties == null)
             {
@@ -21,12 +21,12 @@ namespace Omego.Diff
 
         public int Id { get; private set; }
 
-        public T Property<T>(DiffProperties property)
+        public T Property<T>(DiffProperty key)
         {
-            return (T) properties[property];
+            return (T) properties[key];
         }
 
-        public bool ContainsKey(DiffProperties key)
+        public bool ContainsKey(DiffProperty key)
         {
             return properties.ContainsKey(key);
         }

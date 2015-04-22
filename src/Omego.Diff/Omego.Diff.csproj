@@ -37,7 +37,7 @@
     </Compile>
     <Compile Include="DiffLine.cs" />
     <Compile Include="DiffLineStatus.cs" />
-    <Compile Include="DiffProperties.cs" />
+    <Compile Include="DiffProperty.cs" />
     <Compile Include="DiffReader.cs" />
     <Compile Include="DiffRecord.cs" />
     <Compile Include="DiffResult.cs" />

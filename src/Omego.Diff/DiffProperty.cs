@@ -1,6 +1,6 @@
 namespace Omego.Diff
 {
-    public enum DiffProperties
+    public enum DiffProperty
     {
         FileName,
         LineStatus,

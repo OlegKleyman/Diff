@@ -15,9 +15,9 @@ namespace Omego.Diff.Tests.Unit
         {
             var records = new List<DiffRecord>()
             {
-                new DiffRecord(1, new Dictionary<DiffProperties, object>
+                new DiffRecord(1, new Dictionary<DiffProperty, object>
                 {
-                    {DiffProperties.FileName, "README.md"}
+                    {DiffProperty.FileName, "README.md"}
                 }),
                 new DiffRecord(1, GetLineStatus("### Well hello there!", 1, DiffLineStatus.Unchanged)),
                 new DiffRecord(1, GetLineStatus("THIS IS YB's 1ST CHANGE", 2, DiffLineStatus.Addition)),
@@ -38,9 +38,9 @@ namespace Omego.Diff.Tests.Unit
                 new DiffRecord(1, GetLineStatus(string.Empty, 11, DiffLineStatus.Addition)),
                 new DiffRecord(1, GetLineStatus("2ND CHANGE IS HERE...", 12, DiffLineStatus.Addition)),
                 
-                new DiffRecord(2, new Dictionary<DiffProperties, object>
+                new DiffRecord(2, new Dictionary<DiffProperty, object>
                 {
-                    {DiffProperties.FileName, "index.html"}
+                    {DiffProperty.FileName, "index.html"}
                 }),
                 new DiffRecord(2, GetLineStatus("<html>", 3, DiffLineStatus.Unchanged)),
                 new DiffRecord(2, GetLineStatus("<head>", 4, DiffLineStatus.Unchanged)),
@@ -67,13 +67,13 @@ namespace Omego.Diff.Tests.Unit
             mockDiffReader.Setup(reader => reader.ReadAll()).Returns(records);
         }
 
-        private static Dictionary<DiffProperties, object> GetLineStatus(string content, int number, DiffLineStatus status)
+        private static Dictionary<DiffProperty, object> GetLineStatus(string content, int number, DiffLineStatus status)
         {
-            return new Dictionary<DiffProperties, object>
+            return new Dictionary<DiffProperty, object>
             {
-                {DiffProperties.LineContent, content},
-                {DiffProperties.LineNumber, number},
-                {DiffProperties.LineStatus, status}
+                {DiffProperty.LineContent, content},
+                {DiffProperty.LineNumber, number},
+                {DiffProperty.LineStatus, status}
             };
         }
 
@@ -86,7 +86,7 @@ namespace Omego.Diff.Tests.Unit
             Assert.That(diff.Length, Is.EqualTo(2));
 
             Assert.That(diff[0].FileName, Is.EqualTo("README.md"));
-            Assert.That(diff[0].Lines.Length, Is.EqualTo(10));
+            Assert.That(diff[0].Lines.Count, Is.EqualTo(10));
 
             Assert.That(diff[0].Lines[0].Status, Is.EqualTo(DiffLineStatus.Unchanged));
             Assert.That(diff[0].Lines[0].Number, Is.EqualTo(1));
@@ -129,7 +129,7 @@ namespace Omego.Diff.Tests.Unit
             Assert.That(diff[0].Lines[9].Content, Is.EqualTo("2ND CHANGE IS HERE..."));
 
             Assert.That(diff[1].FileName, Is.EqualTo("index.html"));
-            Assert.That(diff[1].Lines.Length, Is.EqualTo(17));
+            Assert.That(diff[1].Lines.Count, Is.EqualTo(17));
 
             Assert.That(diff[1].Lines[0].Status, Is.EqualTo(DiffLineStatus.Unchanged));
             Assert.That(diff[1].Lines[0].Number, Is.EqualTo(3));

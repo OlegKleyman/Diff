@@ -7,12 +7,12 @@ namespace Omego.Diff
     public class DiffResult
     {
         public string FileName { get; private set; }
-        public DiffLine[] Lines { get; private set; }
+        public IList<DiffLine> Lines { get; private set; }
 
-        private DiffResult(string fileName, IEnumerable<DiffLine> lines)
+        private DiffResult(string fileName, IList<DiffLine> lines)
         {
             FileName = fileName;
-            Lines = lines.ToArray();
+            Lines = lines;
         }
 
         public static IEnumerable<DiffResult> FromReader(DiffReader reader)
@@ -24,15 +24,15 @@ namespace Omego.Diff
             foreach (var file in files)
             {
                 var fileName = file.Single(record => 
-                    record.ContainsKey(DiffProperties.FileName)).Property<string>(DiffProperties.FileName);
+                    record.ContainsKey(DiffProperty.FileName)).Property<string>(DiffProperty.FileName);
 
                 var lines =
-                    file.Where(record => record.ContainsKey(DiffProperties.LineStatus))
-                        .Select(record => new DiffLine(record.Property<DiffLineStatus>(DiffProperties.LineStatus),
-                            record.Property<int>(DiffProperties.LineNumber),
-                            record.Property<string>(DiffProperties.LineContent)));
+                    file.Where(record => record.ContainsKey(DiffProperty.LineStatus))
+                        .Select(record => new DiffLine(record.Property<DiffLineStatus>(DiffProperty.LineStatus),
+                            record.Property<int>(DiffProperty.LineNumber),
+                            record.Property<string>(DiffProperty.LineContent)));
 
-                diffs.Add(new DiffResult(fileName, lines));
+                diffs.Add(new DiffResult(fileName, lines.ToArray()));
             }
 
             return diffs;

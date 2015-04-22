@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Moq;
+using NUnit.Framework;
 
 namespace Omego.Diff.Tests.Unit
 {
-    using System.Linq;
-    using Moq;
-    using NUnit.Framework;
-
     [TestFixture]
     public class DiffTests
     {

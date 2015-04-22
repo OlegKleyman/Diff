@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Moq;
 using NUnit.Framework;
@@ -198,6 +199,13 @@ namespace Omego.Diff.Tests.Unit
             Assert.That(diff[1].Lines[16].Status, Is.EqualTo(DiffLineStatus.Unchanged));
             Assert.That(diff[1].Lines[16].Number, Is.EqualTo(18));
             Assert.That(diff[1].Lines[16].Content, Is.EqualTo("</p>"));
+        }
+
+        [Test]
+        public void FromReaderShouldThrowNullArgumentExceptionWhenPassedANullArgument()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => DiffResult.FromReader(null));
+            Assert.That(ex.Message, Is.EqualTo("Value cannot be null.\r\nParameter name: reader"));
         }
     }
 }

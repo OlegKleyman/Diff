@@ -17,6 +17,11 @@ namespace Omego.Diff
 
         public static IEnumerable<DiffResult> FromReader(DiffReader reader)
         {
+            if (reader == null)
+            {
+                throw new ArgumentNullException("reader");
+            }
+
             var records = reader.ReadAll().ToList();
             var diffs = new List<DiffResult>();
 

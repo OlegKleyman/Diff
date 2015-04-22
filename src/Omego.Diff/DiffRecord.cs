@@ -23,7 +23,7 @@ namespace Omego.Diff
 
         public T Property<T>(DiffProperty key)
         {
-            return (T) properties[key];
+            return (T)properties[key];
         }
 
         public bool ContainsKey(DiffProperty key)
